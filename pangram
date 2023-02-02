@@ -1,0 +1,21 @@
+solution:
+
+class Result {
+    public static String pangrams(String s) {
+        s=s.toLowerCase();
+        String a="abcdefghijklmnopqrstuvwxyz";
+        int b=1;
+    for(int i=0;i<a.length();i++){
+        if(!s.contains(a.substring(i,i+1))){
+            b=0;
+            break;
+        }
+    }
+    if(b==1){
+        return "pangram";
+    }
+    else{
+        return "not pangram";
+            }
+}
+}
