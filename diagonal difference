@@ -1,0 +1,22 @@
+solution:
+
+class Result {
+    public static int diagonalDifference(List<List<Integer>> arr) {
+          int a=0,b=0;
+          int n1=(arr.get(0)).size();
+          for(int i=0;i<n1;i++){
+              for(int j=0;j<n1;j++){
+                  if(i==j){
+                      a=a+(arr.get(i)).get(j);
+                  }
+              }}
+              for(int i=0;i<n1;i++){
+              for(int j=0;j<n1;j++){
+                  if(i+j==n1-1){
+                      b=b+(arr.get(i)).get(j);
+                  }
+              }
+          }
+          return Math.abs(a-b);
+    }
+}
