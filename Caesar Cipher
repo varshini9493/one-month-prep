@@ -1,0 +1,40 @@
+solution:
+
+class Result {
+    public static String caesarCipher(String s, int k) {
+    while(k>0){
+        if(k>26){
+            k=k-26;
+        }
+        else{
+            break;
+        }
+    }
+    String res = "";
+  String  s1="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  char z1 = 'z';
+  char z2='Z';
+  int x1 = (int)z1;
+  int x2 = (int)z2;
+      for(int i=0;i<s.length();i++){
+          if(s1.contains(s.substring(i,i+1))){
+          int b = s.charAt(i);
+          b=b+k;
+      if(Character.isLowerCase(s.charAt(i))){
+          if(b>x1)
+              b=b-26;
+      }
+      else{
+          while(b>x2)
+          b=b-26;
+      }
+      System.out.println(b);
+          res = res+(char)b;      
+          }
+      else{
+          res=res+s.charAt(i);
+      }
+      }
+      return res;
+  }
+}
